@@ -27,9 +27,11 @@ namespace WooCommerceNET.Base
                         if (GetType().FullName.StartsWith("WooCommerceNET.WooCommerce.v1") ||
                             GetType().FullName.StartsWith("WooCommerceNET.WooCommerce.v2") ||
                             GetType().FullName.StartsWith("WooCommerceNET.WooCommerce.v3") ||
+                            GetType().FullName.StartsWith("WooCommerceNET.WooCommerce.Extensions") ||
                             GetType().GetTypeInfo().BaseType.FullName.StartsWith("WooCommerceNET.WooCommerce.v1") ||
                             GetType().GetTypeInfo().BaseType.FullName.StartsWith("WooCommerceNET.WooCommerce.v2") ||
-                            GetType().GetTypeInfo().BaseType.FullName.StartsWith("WooCommerceNET.WooCommerce.v3"))
+                            GetType().GetTypeInfo().BaseType.FullName.StartsWith("WooCommerceNET.WooCommerce.v3") ||
+                            GetType().GetTypeInfo().BaseType.FullName.StartsWith("WooCommerceNET.WooCommerce.Extensions"))
                             objValue.SetValue(this, (pi.GetValue(this) as decimal?).Value.ToString(Culture));
                         else
                             objValue.SetValue(this, decimal.Parse(pi.GetValue(this).ToString(), Culture));
