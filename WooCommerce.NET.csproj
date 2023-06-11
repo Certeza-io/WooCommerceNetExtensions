@@ -18,12 +18,12 @@ Changes Doc: https://github.com/XiaoFaye/WooCommerce.NET/blob/master/Changes.md
 * v0.8.7 update
   1. Added Product Bundles plugin features. </PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyVersion>0.8.6.0</AssemblyVersion>
+    <AssemblyVersion>0.8.7.0</AssemblyVersion>
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>sn.key.snk</AssemblyOriginatorKeyFile>
     <PackageLicenseFile>License.md</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <FileVersion>0.8.6.0</FileVersion>
+    <FileVersion>0.8.7.0</FileVersion>
     <PackageTags>WooCommerce Wordpress Restful API</PackageTags>
     <PackageReadmeFile>Readme.md</PackageReadmeFile>
   </PropertyGroup>
