@@ -518,7 +518,7 @@ namespace WooCommerceNET.WooCommerce.v3
         /// List of bundled items contained in this product. See Bundled Item Properties.
         /// </summary>
         [DataMember(EmitDefaultValue = false)]
-        public List<BundledItem> bundled_items { get; set; }
+        public List<BundledItemLine> bundled_items { get; set; }
     }
 
     [DataContract]
@@ -672,7 +672,7 @@ namespace WooCommerceNET.WooCommerce.v3
     public class ProductError : v2.ProductError { }
 
     [DataContract]
-    public class BundledItem
+    public class BundledItemLine
     {
         /// <summary>
         /// Bundled item ID.
