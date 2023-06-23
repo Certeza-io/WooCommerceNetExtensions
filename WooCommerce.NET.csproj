@@ -2,14 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageId>WooCommerceNET</PackageId>
+    <PackageId>WooCommerceNetExtensions</PackageId>
     <Version>0.8.7</Version>
-    <Authors>JamesYang@NZ, Luis Vazquez (@luiscreates)</Authors>
-    <Company>JamesYang@NZ, Luis Vazquez (@luiscreates)</Company>
+    <Authors>Luis Vazquez (@luiscreates), JamesYang@NZ, </Authors>
+    <Company>Luis Vazquez (@luiscreates), JamesYang@NZ</Company>
     <Description>A .NET Wrapper for WooCommerce/WordPress REST API (Includes some extensions)</Description>
-    <Copyright>Copyright ©  2015 - 2023 JamesYang@NZ, Luis Vazquez (@luiscreates)</Copyright>
+    <Copyright>Copyright ©  2015 - 2023 Luis Vazquez (@luiscreates), JamesYang@NZ, </Copyright>
     <PackageLicenseUrl></PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/luiscreates/WooCommerce.NET</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/luiscreates/WooCommerce.NET.Extensions</PackageProjectUrl>
     <PackageReleaseNotes>WooCommerce.NET is a .NET library for calling WooCommerce/WordPress REST API in .NET applications. This version is a forked version updated by Luis Vazquez (@luiscreates) to include Product Bundles.
 
 GitHub: https://github.com/luiscreates/WooCommerce.NET
@@ -24,7 +24,7 @@ Changes Doc: https://github.com/luiscreates/WooCommerce.NET/blob/master/Changes.
     <PackageLicenseFile>License.md</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <FileVersion>0.8.7.0</FileVersion>
-    <PackageTags>WooCommerce Wordpress Restful API</PackageTags>
+    <PackageTags>WooCommerce Wordpress Restful API With Product Bundles</PackageTags>
     <PackageReadmeFile>Readme.md</PackageReadmeFile>
   </PropertyGroup>
 
