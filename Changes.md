@@ -3,6 +3,8 @@
 
 Version History
 -------------------
+* v0.8.7 update
+  1. Added Product Bundles feature.
 * v0.8.6 update
   1. Fix manage_stock property deserializing issue in Project object. #722
   2. Add Culture object in WCObject constructor to resolve format issue. #731

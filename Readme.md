@@ -6,15 +6,16 @@ A Brief Intro
 
 WooCommerce.NET is a .NET library for calling WooCommerce/WordPress REST API with OAuth/JWT in .NET applications.
 
+NOTE: This library includes the WooCommerce extension/feature for Product Bundles. The base library was developed by James Yang and can be [found here](https://github.com/XiaoFaye/WooCommerce.NET) 
+
 * [Visit WooCommerce](http://www.woothemes.com/woocommerce/)
 * [Visit WooCommerce REST API DOCS](https://woocommerce.github.io/woocommerce-rest-api-docs/)
+* [Visit WooCommerce Product Bundles REST API DOCS](https://woocommerce.com/document/bundles-rest-api-reference/)
 * [Visit WordPress REST API DOCS](https://developer.wordpress.org/rest-api/)
 
-[![NuGet](https://buildstats.info/nuget/WooCommerceNET)](http://www.nuget.org/packages/WooCommerceNET)
+If this project has been helpful for you, please consider following me on [LinkedIn](https://linkedin.com/in/luisvazquez7), [Twitter](https://twitter.com/luiscreates), or [Instagram](https://instagram.com/luiscreates)
 
-If this project has been helpful for you and you want to support it, please consider [Buying me a coffee](https://www.buymeacoffee.com/YU0SqVyrR):coffee:
-
-**For priority paid support/consulting service, customized REST API development and plugins REST API development, please email to [James (me:sunglasses:)](mailto:xiaofaye@msn.com), thank you!**
+** For data integration, automation or custom web app development, feel free to (reach out to me)[mailto:luis@mightyintrovert.com] 
 
 Usage (WooCommerce REST API)
 -------------------
