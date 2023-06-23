@@ -6,14 +6,14 @@
     <Version>0.8.7</Version>
     <Authors>JamesYang@NZ, Luis Vazquez (@luiscreates)</Authors>
     <Company>JamesYang@NZ, Luis Vazquez (@luiscreates)</Company>
-    <Description>A .NET Wrapper for WooCommerce/WordPress REST API</Description>
-    <Copyright>Copyright ©  2015 - 2023 Luis Vazquez (@luiscreates)</Copyright>
+    <Description>A .NET Wrapper for WooCommerce/WordPress REST API (Includes some extensions)</Description>
+    <Copyright>Copyright ©  2015 - 2023 JamesYang@NZ, Luis Vazquez (@luiscreates)</Copyright>
     <PackageLicenseUrl></PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/XiaoFaye/WooCommerce.NET</PackageProjectUrl>
-    <PackageReleaseNotes>WooCommerce.NET is a .NET library for calling WooCommerce/WordPress REST API in .NET applications. This version is a forked version updated by Luis Vazquez (@luiscreates) to include Product Bundles and Composite Extensions.
+    <PackageProjectUrl>https://github.com/luiscreates/WooCommerce.NET</PackageProjectUrl>
+    <PackageReleaseNotes>WooCommerce.NET is a .NET library for calling WooCommerce/WordPress REST API in .NET applications. This version is a forked version updated by Luis Vazquez (@luiscreates) to include Product Bundles.
 
-GitHub: https://github.com/XiaoFaye/WooCommerce.NET
-Changes Doc: https://github.com/XiaoFaye/WooCommerce.NET/blob/master/Changes.md
+GitHub: https://github.com/luiscreates/WooCommerce.NET
+Changes Doc: https://github.com/luiscreates/WooCommerce.NET/blob/master/Changes.md
 
 * v0.8.7 update
   1. Added Product Bundles plugin features. </PackageReleaseNotes>
