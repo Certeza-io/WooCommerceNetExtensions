@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>WooCommerceNetExtensions</PackageId>
     <Version>0.8.7</Version>
-    <Authors>Luis Vazquez (@luiscreates), JamesYang@NZ, </Authors>
+    <Authors>Luis Vazquez (@luiscreates), JamesYang@NZ</Authors>
     <Company>Luis Vazquez (@luiscreates), JamesYang@NZ</Company>
     <Description>A .NET Wrapper for WooCommerce/WordPress REST API (Includes some extensions)</Description>
     <Copyright>Copyright ©  2015 - 2023 Luis Vazquez (@luiscreates), JamesYang@NZ, </Copyright>
