@@ -3,27 +3,27 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>WooCommerceNetExtensions</PackageId>
-    <Version>0.8.7</Version>
-    <Authors>Luis Vazquez (@luiscreates), JamesYang@NZ</Authors>
-    <Company>Luis Vazquez (@luiscreates), JamesYang@NZ</Company>
-    <Description>A .NET Wrapper for WooCommerce/WordPress REST API (Includes some extensions)</Description>
-    <Copyright>Copyright ©  2015 - 2023 Luis Vazquez (@luiscreates), JamesYang@NZ, </Copyright>
+    <Version>0.8.8</Version>
+    <Authors>Luis Vazquez (@luiscreates) </Authors>
+    <Company>Luis Vazquez (@luiscreates)</Company>
+    <Description>Extends WooCommerceNET to support Product Bundles</Description>
+    <Copyright>Copyright © 2023 Luis Vazquez (@luiscreates)</Copyright>
     <PackageLicenseUrl></PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/luiscreates/WooCommerce.NET.Extensions</PackageProjectUrl>
-    <PackageReleaseNotes>WooCommerce.NET is a .NET library for calling WooCommerce/WordPress REST API in .NET applications. This version is a forked version updated by Luis Vazquez (@luiscreates) to include Product Bundles.
+    <PackageReleaseNotes>Extends WooCommerce.NET to support Product Bundles.
 
 GitHub: https://github.com/luiscreates/WooCommerce.NET
 Changes Doc: https://github.com/luiscreates/WooCommerce.NET/blob/master/Changes.md
 
-* v0.8.7 update
+* v0.8.8 update
   1. Added Product Bundles plugin features. </PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyVersion>0.8.7.0</AssemblyVersion>
+    <AssemblyVersion>0.8.8.0</AssemblyVersion>
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>sn.key.snk</AssemblyOriginatorKeyFile>
     <PackageLicenseFile>License.md</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <FileVersion>0.8.7.0</FileVersion>
+    <FileVersion>0.8.8.0</FileVersion>
     <PackageTags>WooCommerce Wordpress Restful API With Product Bundles</PackageTags>
     <PackageReadmeFile>Readme.md</PackageReadmeFile>
   </PropertyGroup>
