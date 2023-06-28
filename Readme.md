@@ -7,4 +7,4 @@
 
 If this project has been helpful for you, please consider following me on [LinkedIn](https://linkedin.com/in/luisvazquez7), [Twitter](https://twitter.com/luiscreates), or [Instagram](https://instagram.com/luiscreates)
 
-** For data integration, automation or custom web app development, feel free to [reach out to me](mailto:luis@mightyintrovert.com)
+** For data integration, automation or custom web app development, feel free to (reach out to me)[mailto:luis@mightyintrovert.com] 
