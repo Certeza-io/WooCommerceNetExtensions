@@ -512,7 +512,7 @@ namespace WooCommerceNET.WooCommerce.v3
         /// Quantity of bundles left in stock, taking bundled product quantity requirements into account. Applicable for bundle-type products only. Read only.
         /// </summary>
         [DataMember(EmitDefaultValue = false)]
-        public int? bundle_stock_quantity { get; set; }
+        public string bundle_stock_quantity { get; set; }
 
         /// <summary>
         /// List of bundled items contained in this product. See Bundled Item Properties.
