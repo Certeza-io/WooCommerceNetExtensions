@@ -648,7 +648,7 @@ namespace WooCommerceNET.WooCommerce.v2
         /// List of available term names of the attribute.
         /// </summary>
         [DataMember(EmitDefaultValue = false)]
-        public List<string> options { get; set; }
+        public List<string> options { get; set; } = new List<string>();
 
     }
     
