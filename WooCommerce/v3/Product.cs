@@ -467,14 +467,14 @@ namespace WooCommerceNET.WooCommerce.v3
         /// Single-product details page layout. Applicable for bundle-type products only. Values: default, tabular.
         /// </summary>
         [DataMember(EmitDefaultValue = false)]
-        public string bundle_layout { get; set; }
+        public string bundle_layout { get; set; } = "default";
 
         /// <summary>
         /// Controls the form location of the product in the single-product page. Applicable to bundle-type products.
         /// Values: default, after_summary
         /// </summary>
         [DataMember(EmitDefaultValue = false)]
-        public string bundle_add_to_cart_form_location { get; set; }
+        public string bundle_add_to_cart_form_location { get; set; } = "default";
 
         /// <summary>
         /// Controls whether the configuration of this product can be modified from the cart page. Applicable to bundle-type products.
@@ -487,7 +487,7 @@ namespace WooCommerceNET.WooCommerce.v3
         /// Values: parent, noindent, none.
         /// </summary>
         [DataMember(EmitDefaultValue = false)]
-        public string bundle_item_grouping { get; set; }
+        public string bundle_item_grouping { get; set; } = "none";
 
         /// <summary>
         /// Min bundle size. Applicable for bundle-type products only.
