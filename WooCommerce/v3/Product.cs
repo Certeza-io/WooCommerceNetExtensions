@@ -410,8 +410,8 @@ namespace WooCommerceNET.WooCommerce.v3
         /// <summary>
         /// List of attributes. See Product - Attributes properties
         /// </summary>
-        [DataMember(EmitDefaultValue = false)]
-        public List<ProductAttributeLine> attributes { get; set; }
+        [DataMember(EmitDefaultValue = true)]
+        public List<ProductAttributeLine> attributes { get; set; } = new List<ProductAttributeLine>();
 
         /// <summary>
         /// Defaults variation attributes. See Product - Default attributes properties
