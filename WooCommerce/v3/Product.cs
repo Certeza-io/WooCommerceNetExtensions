@@ -404,8 +404,8 @@ namespace WooCommerceNET.WooCommerce.v3
         /// <summary>
         /// List of images. See Product - Images properties
         /// </summary>
-        [DataMember(EmitDefaultValue = false)]
-        public List<ProductImage> images { get; set; }
+        [DataMember(EmitDefaultValue = true)]
+        public List<ProductImage> images { get; set; } = new List<ProductImage>();
 
         /// <summary>
         /// List of attributes. See Product - Attributes properties
