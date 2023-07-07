@@ -211,8 +211,8 @@ namespace WooCommerceNET.WooCommerce.v3
         /// <summary>
         /// List of downloadable files. See Product - Downloads properties
         /// </summary>
-        [DataMember(EmitDefaultValue = false)]
-        public List<ProductDownloadLine> downloads { get; set; }
+        [DataMember(EmitDefaultValue = true)]
+        public List<ProductDownloadLine> downloads { get; set; } = new List<ProductDownloadLine>();
 
         /// <summary>
         /// Number of times downloadable files can be downloaded after purchase. Default is -1.
@@ -362,20 +362,20 @@ namespace WooCommerceNET.WooCommerce.v3
         /// List of related products IDs. 
         /// read-only
         /// </summary>
-        [DataMember(EmitDefaultValue = false)]
-        public List<ulong> related_ids { get; set; }
+        [DataMember(EmitDefaultValue = true)]
+        public List<ulong> related_ids { get; set; } = new List<ulong>();
 
         /// <summary>
         /// List of up-sell products IDs.
         /// </summary>
-        [DataMember(EmitDefaultValue = false)]
-        public List<ulong> upsell_ids { get; set; }
+        [DataMember(EmitDefaultValue = true)]
+        public List<ulong> upsell_ids { get; set; } = new List<ulong>();
 
         /// <summary>
         /// List of cross-sell products IDs.
         /// </summary>
-        [DataMember(EmitDefaultValue = false)]
-        public List<ulong> cross_sell_ids { get; set; }
+        [DataMember(EmitDefaultValue = true)]
+        public List<ulong> cross_sell_ids { get; set; } = new List<ulong>();
 
         /// <summary>
         /// Product parent ID.
@@ -399,39 +399,39 @@ namespace WooCommerceNET.WooCommerce.v3
         /// List of tags. See Product - Tags properties
         /// </summary>
         [DataMember(EmitDefaultValue = false)]
-        public List<ProductTagLine> tags { get; set; }
+        public List<ProductTagLine> tags { get; set; } = new List<ProductTagLine>();
 
         /// <summary>
         /// List of images. See Product - Images properties
         /// </summary>
-        [DataMember(EmitDefaultValue = false)]
-        public List<ProductImage> images { get; set; }
+        [DataMember(EmitDefaultValue = true)]
+        public List<ProductImage> images { get; set; } = new List<ProductImage>();
 
         /// <summary>
         /// List of attributes. See Product - Attributes properties
         /// </summary>
-        [DataMember(EmitDefaultValue = false)]
-        public List<ProductAttributeLine> attributes { get; set; }
+        [DataMember(EmitDefaultValue = true)]
+        public List<ProductAttributeLine> attributes { get; set; } = new List<ProductAttributeLine>();
 
         /// <summary>
         /// Defaults variation attributes. See Product - Default attributes properties
         /// </summary>
         [DataMember(EmitDefaultValue = false)]
-        public List<ProductDefaultAttribute> default_attributes { get; set; }
+        public List<ProductDefaultAttribute> default_attributes { get; set; } = new List<ProductDefaultAttribute>();
 
         /// <summary>
         /// List of variations IDs. 
         /// read-only
         /// </summary>
-        [DataMember(EmitDefaultValue = false)]
-        public List<int> variations { get; set; }
+        [DataMember(EmitDefaultValue = true)]
+        public List<int> variations { get; set; } = new List<int>();
 
         /// <summary>
         /// List of grouped products ID. 
         /// read-only
         /// </summary>
-        [DataMember(EmitDefaultValue = false)]
-        public List<int> grouped_products { get; set; }
+        [DataMember(EmitDefaultValue = true)]
+        public List<int> grouped_products { get; set; } = new List<int>();
 
         /// <summary>
         /// Menu order, used to custom sort products.
@@ -442,8 +442,8 @@ namespace WooCommerceNET.WooCommerce.v3
         /// <summary>
         /// Meta data. See Product - Meta data properties
         /// </summary>
-        [DataMember(EmitDefaultValue = false)]
-        public List<v2.ProductMeta> meta_data { get; set; }
+        [DataMember(EmitDefaultValue = true)]
+        public List<v2.ProductMeta> meta_data { get; set; } = new List<v2.ProductMeta>();
 
         /// <summary>
         /// Container for error information, if any
@@ -454,8 +454,8 @@ namespace WooCommerceNET.WooCommerce.v3
         /// <summary>
         /// List of product bundle IDs that contain this product.
         /// </summary>
-        [DataMember(EmitDefaultValue = false)]
-        public List<int?> bundled_by { get; set; }
+        [DataMember(EmitDefaultValue = true)]
+        public List<int?> bundled_by { get; set; } = new List<int?>();
 
         /// <summary>
         /// Forces all contents of this bundle to be treated as virtual.
