@@ -923,13 +923,13 @@ namespace WooCommerceNET.WooCommerce.v3
         /// The product ID of the default/pre-selected component opion.
         /// </summary>
         [DataMember(EmitDefaultValue = false)]
-        public int default_option_id { get; set; }
+        public int? default_option_id { get; set; }
 
         /// <summary>
         /// The attachment ID of the thumbnail associated with this Component.
         /// </summary>
         [DataMember(EmitDefaultValue = false)]
-        public int thumbnail_id { get; set; }
+        public int? thumbnail_id { get; set; }
 
         /// <summary>
         /// URL of the thumbnail associated with this Component.
