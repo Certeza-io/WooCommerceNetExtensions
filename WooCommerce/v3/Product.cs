@@ -211,8 +211,8 @@ namespace WooCommerceNET.WooCommerce.v3
         /// <summary>
         /// List of downloadable files. See Product - Downloads properties
         /// </summary>
-        [DataMember(EmitDefaultValue = false)]
-        public List<ProductDownloadLine> downloads { get; set; }
+        [DataMember(EmitDefaultValue = true)]
+        public List<ProductDownloadLine> downloads { get; set; } = new List<ProductDownloadLine>();
 
         /// <summary>
         /// Number of times downloadable files can be downloaded after purchase. Default is -1.
@@ -362,20 +362,20 @@ namespace WooCommerceNET.WooCommerce.v3
         /// List of related products IDs. 
         /// read-only
         /// </summary>
-        [DataMember(EmitDefaultValue = false)]
-        public List<ulong> related_ids { get; set; }
+        [DataMember(EmitDefaultValue = true)]
+        public List<ulong> related_ids { get; set; } = new List<ulong>();
 
         /// <summary>
         /// List of up-sell products IDs.
         /// </summary>
-        [DataMember(EmitDefaultValue = false)]
-        public List<ulong> upsell_ids { get; set; }
+        [DataMember(EmitDefaultValue = true)]
+        public List<ulong> upsell_ids { get; set; } = new List<ulong>();
 
         /// <summary>
         /// List of cross-sell products IDs.
         /// </summary>
-        [DataMember(EmitDefaultValue = false)]
-        public List<ulong> cross_sell_ids { get; set; }
+        [DataMember(EmitDefaultValue = true)]
+        public List<ulong> cross_sell_ids { get; set; } = new List<ulong>();
 
         /// <summary>
         /// Product parent ID.
@@ -399,13 +399,13 @@ namespace WooCommerceNET.WooCommerce.v3
         /// List of tags. See Product - Tags properties
         /// </summary>
         [DataMember(EmitDefaultValue = false)]
-        public List<ProductTagLine> tags { get; set; }
+        public List<ProductTagLine> tags { get; set; } = new List<ProductTagLine>();
 
         /// <summary>
         /// List of images. See Product - Images properties
         /// </summary>
-        [DataMember(EmitDefaultValue = false)]
-        public List<ProductImage> images { get; set; }
+        [DataMember(EmitDefaultValue = true)]
+        public List<ProductImage> images { get; set; } = new List<ProductImage>();
 
         /// <summary>
         /// List of attributes. See Product - Attributes properties
@@ -417,21 +417,21 @@ namespace WooCommerceNET.WooCommerce.v3
         /// Defaults variation attributes. See Product - Default attributes properties
         /// </summary>
         [DataMember(EmitDefaultValue = false)]
-        public List<ProductDefaultAttribute> default_attributes { get; set; }
+        public List<ProductDefaultAttribute> default_attributes { get; set; } = new List<ProductDefaultAttribute>();
 
         /// <summary>
         /// List of variations IDs. 
         /// read-only
         /// </summary>
-        [DataMember(EmitDefaultValue = false)]
-        public List<int> variations { get; set; }
+        [DataMember(EmitDefaultValue = true)]
+        public List<int> variations { get; set; } = new List<int>();
 
         /// <summary>
         /// List of grouped products ID. 
         /// read-only
         /// </summary>
-        [DataMember(EmitDefaultValue = false)]
-        public List<int> grouped_products { get; set; }
+        [DataMember(EmitDefaultValue = true)]
+        public List<int> grouped_products { get; set; } = new List<int>();
 
         /// <summary>
         /// Menu order, used to custom sort products.
@@ -442,8 +442,8 @@ namespace WooCommerceNET.WooCommerce.v3
         /// <summary>
         /// Meta data. See Product - Meta data properties
         /// </summary>
-        [DataMember(EmitDefaultValue = false)]
-        public List<v2.ProductMeta> meta_data { get; set; }
+        [DataMember(EmitDefaultValue = true)]
+        public List<v2.ProductMeta> meta_data { get; set; } = new List<v2.ProductMeta>();
 
         /// <summary>
         /// Container for error information, if any
@@ -454,8 +454,8 @@ namespace WooCommerceNET.WooCommerce.v3
         /// <summary>
         /// List of product bundle IDs that contain this product.
         /// </summary>
-        [DataMember(EmitDefaultValue = false)]
-        public List<int?> bundled_by { get; set; }
+        [DataMember(EmitDefaultValue = true)]
+        public List<int?> bundled_by { get; set; } = new List<int?>();
 
         /// <summary>
         /// Forces all contents of this bundle to be treated as virtual.
@@ -519,6 +519,55 @@ namespace WooCommerceNET.WooCommerce.v3
         /// </summary>
         [DataMember(EmitDefaultValue = false)]
         public List<BundledItemLine> bundled_items { get; set; }
+
+        /// <summary>
+        /// Forces all contents of this composite product to be treated as virtual.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public bool composite_virtual { get; set; }
+
+        /// <summary>
+        /// Single-product template layout. Applicable to composite-type products. Values: single, progressive, paged, paged-componentized.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public string composite_layout { get; set; }
+
+        /// <summary>
+        /// Controls the form location of the product in the single-product page. Values: default, after_summary.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public string composite_add_to_cart_form_location { get; set; }
+
+        /// <summary>
+        /// Controls whether the configuration of this product can be modified from the cart page.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public bool composite_editable_in_cart { get; set; }
+
+        /// <summary>
+        /// Sold Individually option context. Values: product, configuration.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public string composite_sold_individually_context { get; set; }
+
+        /// <summary>
+        /// Composite catalog price calculation type. Values: defaults, min_max, hidden.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public string composite_shop_price_calc { get; set; }
+
+        /// <summary>
+        /// List of components that this product consists of. Applicable to composite-type products. See Component Properties.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public List<ComponentItemLine> composite_components { get; set; }
+
+        /// <summary>
+        /// Scenarios configured for this product. Applicable to composite-type products. See Scenario Properties.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public List<ScenarioItemLine> composite_scenarios { get; set; }
+
     }
 
     [DataContract]
@@ -829,5 +878,262 @@ namespace WooCommerceNET.WooCommerce.v3
         /// </summary>
         [DataMember(EmitDefaultValue = false)]
         public string stock_status { get; set; }
+    }
+
+    [DataContract]
+    public class ComponentItemLine
+    {
+        /// <summary>
+        /// Component ID.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false, IsRequired = false)]
+        public string id { get; set; }
+
+        /// <summary>
+        /// Set to true to delete the component with the specified ID.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public bool delete { get; set; }
+
+        /// <summary>
+        /// Title of the component.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public string title { get; set; }
+
+        /// <summary>
+        /// Description of the component.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public string description { get; set; }
+
+        /// <summary>
+        /// Component options query type. Values: product_ids, category_ids.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public string query_type { get; set; }
+
+        /// <summary>
+        /// Product IDs or category IDs to use for populating component options.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public List<int> query_ids { get; set; }
+
+        /// <summary>
+        /// The product ID of the default/pre-selected component opion.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public string default_option_id { get; set; }
+
+        /// <summary>
+        /// The attachment ID of the thumbnail associated with this Component.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public string thumbnail_id { get; set; }
+
+        /// <summary>
+        /// URL of the thumbnail associated with this Component.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public string thumbnail_src { get; set; }
+
+        /// <summary>
+        /// Minimum component quantity.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public int? quantity_min { get; set; }
+
+        /// <summary>
+        /// Maximum component quantity.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public int? quantity_max { get; set; }
+
+        /// <summary>
+        /// Indicates whether the price of this component is added to the base price of the composite.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public bool priced_individually { get; set; }
+
+        /// <summary>
+        /// Indicates whether this component is shipped separately from the composite.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public bool shipped_individually { get; set; }
+
+        /// <summary>
+        /// Indicates whether the component is optional.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public bool optional { get; set; }
+
+        /// <summary>
+        /// Discount applied to the component, applicable when the Priced Individually option is enabled.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public string discount { get; set; }
+
+        /// <summary>
+        /// Indicates which template/style to use to display component options. Values: dropdowns, thumbnails, radios.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public string options_style { get; set; }
+
+        /// <summary>
+        /// Controls how new Thumbnails are loaded into the Component Options view. Applicable when the Options Style of this Component is set to Thumbnails. Values: classic, load-more.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public string pagination_style { get; set; }
+
+        /// <summary>
+        /// Controls how Component Option prices are displayed. Applicable when Priced Individually is enabled for this Component. Values: absolute, relative, hidden.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public string display_prices { get; set; }
+
+        /// <summary>
+        /// Whether to display sorting options in this Component.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public bool show_sorting_options { get; set; }
+
+        /// <summary>
+        /// Whether to display filtering options in this Component.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public bool show_filtering_options { get; set; }
+
+        /// <summary>
+        /// Attribute IDs to use for creating Component Option filters.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public List<ulong> attribute_filter_ids { get; set; }
+
+        /// <summary>
+        /// Controls the visibility of product titles in the Component Selection view.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public bool product_title_visible { get; set; }
+
+        /// <summary>
+        /// Controls the visibility of product short descriptions in the Component Selection view.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public bool product_descr_visible { get; set; }
+
+        /// <summary>
+        /// Controls the visibility of product prices in the Component Selection view.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public bool product_price_visible { get; set; }
+
+        /// <summary>
+        /// Controls the visibility of product thumbnails in the Component Selection view.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public bool product_thumb_visible { get; set; }
+
+        /// <summary>
+        /// Controls the visibility of the subtotal associated with this Component in the single-product page.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public bool subtotal_visible_product { get; set; }
+
+        /// <summary>
+        /// Controls the visibility of the subtotal associated with this Component in the cart page.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public bool subtotal_visible_cart { get; set; }
+
+        /// <summary>
+        /// Controls the visibility of the subtotal associated with this Component in order-related pages and e-mail notifications.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public bool subtotal_visible_orders { get; set; }
+    }
+
+    [DataContract]
+    public class ScenarioItemLine
+    {
+        /// <summary>
+        /// Scenario ID.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false, IsRequired = false)]
+        public string id { get; set; }
+
+        /// <summary>
+        /// Set to true to delete the scenario with the specified ID.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public bool delete { get; set; }
+
+        /// <summary>
+        /// Name of the scenario.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public string name { get; set; }
+
+        /// <summary>
+        /// Optional short description of the scenario.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public string description { get; set; }
+
+        /// <summary>
+        /// Matching conditions for components. See Component Matching Condition Properties.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public List<ComponentMatchingConditionLine> configuration { get; set; }
+
+        /// <summary>
+        /// Scenario actions. See Scenario Action Properties.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public List<ScenarioActionLine> actions { get; set; }
+
+        /// <summary>
+        /// Controls whether this Scenario will be enabled.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public bool enabled { get; set; }
+    }
+
+    [DataContract]
+    public class ComponentMatchingConditionLine
+    {
+        /// <summary>
+        /// Component ID.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public string component_id { get; set; }
+
+        /// <summary>
+        /// Product/variation IDs in component targeted by the scenario. Enter -1 for “No selection”. Must be omitted when specifying any in options_modifier.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public List<string> component_options { get; set; }
+
+        /// <summary>
+        /// Comparison modifier for the referenced product/variation IDs. Values: in, not-in, any.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public string options_modifier { get; set; }
+    }
+
+    [DataContract]
+    public class ScenarioActionLine
+    {
+        /// <summary>
+        /// Scenario Action ID
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public string scenario_id { get; set; }
+
+        /// <summary>
+        /// Indicates whether the scenario action is active.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public bool is_active { get; set; }
+
     }
 }
