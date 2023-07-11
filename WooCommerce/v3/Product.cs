@@ -923,13 +923,13 @@ namespace WooCommerceNET.WooCommerce.v3
         /// The product ID of the default/pre-selected component opion.
         /// </summary>
         [DataMember(EmitDefaultValue = false)]
-        public int? default_option_id { get; set; }
+        public string default_option_id { get; set; }
 
         /// <summary>
         /// The attachment ID of the thumbnail associated with this Component.
         /// </summary>
         [DataMember(EmitDefaultValue = false)]
-        public int? thumbnail_id { get; set; }
+        public string thumbnail_id { get; set; }
 
         /// <summary>
         /// URL of the thumbnail associated with this Component.
@@ -941,13 +941,13 @@ namespace WooCommerceNET.WooCommerce.v3
         /// Minimum component quantity.
         /// </summary>
         [DataMember(EmitDefaultValue = false)]
-        public int quantity_min { get; set; }
+        public int? quantity_min { get; set; }
 
         /// <summary>
         /// Maximum component quantity.
         /// </summary>
         [DataMember(EmitDefaultValue = false)]
-        public int quantity_max { get; set; }
+        public int? quantity_max { get; set; }
 
         /// <summary>
         /// Indicates whether the price of this component is added to the base price of the composite.
@@ -1007,7 +1007,7 @@ namespace WooCommerceNET.WooCommerce.v3
         /// Attribute IDs to use for creating Component Option filters.
         /// </summary>
         [DataMember(EmitDefaultValue = false)]
-        public List<int> attribute_filter_ids { get; set; }
+        public List<ulong> attribute_filter_ids { get; set; }
 
         /// <summary>
         /// Controls the visibility of product titles in the Component Selection view.

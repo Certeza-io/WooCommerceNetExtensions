@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>WooCommerceNetExtensions</PackageId>
-    <Version>0.9.4</Version>
+    <Version>0.9.12</Version>
     <Authors>Luis Vazquez (@luiscreates) </Authors>
     <Company>Luis Vazquez (@luiscreates)</Company>
     <Description>Extends WooCommerceNET to support Product Bundles</Description>
@@ -15,15 +15,15 @@
 GitHub: https://github.com/luiscreates/WooCommerce.NET
 Changes Doc: https://github.com/luiscreates/WooCommerce.NET/blob/master/Changes.md
 
-* v0.9.4 update
+* v0.9.12 update
   - Added initial structure for composites</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyVersion>0.9.4.0</AssemblyVersion>
+    <AssemblyVersion>0.9.12.0</AssemblyVersion>
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>sn.key.snk</AssemblyOriginatorKeyFile>
     <PackageLicenseFile>License.md</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <FileVersion>0.9.4.0</FileVersion>
+    <FileVersion>0.9.12.0</FileVersion>
     <PackageTags>WooCommerce Wordpress Restful API With Product Bundles</PackageTags>
     <PackageReadmeFile>Readme.md</PackageReadmeFile>
   </PropertyGroup>
