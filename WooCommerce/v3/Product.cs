@@ -293,6 +293,12 @@ namespace WooCommerceNET.WooCommerce.v3
         public bool? backordered { get; set; }
 
         /// <summary>
+        /// Low stock amount.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public int? low_stock_amount { get; set; }
+
+        /// <summary>
         /// Allow one item to be bought in a single order. Default is false.
         /// </summary>
         [DataMember(EmitDefaultValue = false)]
