@@ -131,14 +131,12 @@ namespace WooCommerceNET.WooCommerce.v3
         public decimal? price { get; set; }
         
         [DataMember(EmitDefaultValue = false, Name = "regular_price")]
-        protected object regular_priceValue { get; set; }
         /// <summary>
         /// Product regular price.
         /// </summary>
         public decimal? regular_price { get; set; }
         
         [DataMember(EmitDefaultValue = false, Name = "sale_price")]
-        protected object sale_priceValue { get; set; }
         /// <summary>
         /// Product sale price.
         /// </summary>
