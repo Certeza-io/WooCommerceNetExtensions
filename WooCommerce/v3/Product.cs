@@ -135,7 +135,7 @@ namespace WooCommerceNET.WooCommerce.v3
         /// </summary>
         public string regular_price { get; set; } = string.Empty;
         
-        [DataMember(EmitDefaultValue = false, Name = "sale_price")]
+        [DataMember(EmitDefaultValue = true, Name = "sale_price")]
         /// <summary>
         /// Product sale price.
         /// </summary>
@@ -890,7 +890,7 @@ namespace WooCommerceNET.WooCommerce.v3
         /// Component ID.
         /// </summary>
         [DataMember(EmitDefaultValue = false, IsRequired = false)]
-        public int id { get; set; }
+        public string id { get; set; }
 
         /// <summary>
         /// Set to true to delete the component with the specified ID.
