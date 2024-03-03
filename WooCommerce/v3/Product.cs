@@ -123,24 +123,23 @@ namespace WooCommerceNET.WooCommerce.v3
         public string sku { get; set; }
         
         [DataMember(EmitDefaultValue = false, Name = "price")]
-        protected object priceValue { get; set; }
         /// <summary>
         /// Current product price. 
         /// read-only
         /// </summary>
-        public decimal? price { get; set; }
+        public string price { get; set; } = string.Empty;
         
         [DataMember(EmitDefaultValue = false, Name = "regular_price")]
         /// <summary>
         /// Product regular price.
         /// </summary>
-        public decimal? regular_price { get; set; }
+        public string regular_price { get; set; } = string.Empty;
         
         [DataMember(EmitDefaultValue = false, Name = "sale_price")]
         /// <summary>
         /// Product sale price.
         /// </summary>
-        public decimal? sale_price { get; set; }
+        public string sale_price { get; set; } = string.Empty;
 
         /// <summary>
         /// Start date of sale price, in the site’s timezone.
@@ -891,7 +890,7 @@ namespace WooCommerceNET.WooCommerce.v3
         /// Component ID.
         /// </summary>
         [DataMember(EmitDefaultValue = false, IsRequired = false)]
-        public string id { get; set; }
+        public int id { get; set; }
 
         /// <summary>
         /// Set to true to delete the component with the specified ID.
