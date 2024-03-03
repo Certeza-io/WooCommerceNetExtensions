@@ -932,7 +932,7 @@ namespace WooCommerceNET.WooCommerce.v3
         /// The attachment ID of the thumbnail associated with this Component.
         /// </summary>
         [DataMember(EmitDefaultValue = false)]
-        public int thumbnail_id { get; set; }
+        public string thumbnail_id { get; set; }
 
         /// <summary>
         /// URL of the thumbnail associated with this Component.
