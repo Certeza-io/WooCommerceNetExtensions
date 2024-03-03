@@ -123,26 +123,23 @@ namespace WooCommerceNET.WooCommerce.v3
         public string sku { get; set; }
         
         [DataMember(EmitDefaultValue = false, Name = "price")]
-        protected object priceValue { get; set; }
         /// <summary>
         /// Current product price. 
         /// read-only
         /// </summary>
-        public decimal? price { get; set; }
+        public string price { get; set; } = string.Empty;
         
         [DataMember(EmitDefaultValue = false, Name = "regular_price")]
-        protected object regular_priceValue { get; set; }
         /// <summary>
         /// Product regular price.
         /// </summary>
-        public decimal? regular_price { get; set; }
+        public string regular_price { get; set; } = string.Empty;
         
-        [DataMember(EmitDefaultValue = false, Name = "sale_price")]
-        protected object sale_priceValue { get; set; }
+        [DataMember(EmitDefaultValue = true, Name = "sale_price")]
         /// <summary>
         /// Product sale price.
         /// </summary>
-        public decimal? sale_price { get; set; }
+        public string sale_price { get; set; } = string.Empty;
 
         /// <summary>
         /// Start date of sale price, in the site’s timezone.
@@ -291,6 +288,12 @@ namespace WooCommerceNET.WooCommerce.v3
         /// </summary>
         [DataMember(EmitDefaultValue = false)]
         public bool? backordered { get; set; }
+
+        /// <summary>
+        /// Low stock amount.
+        /// </summary>
+        [DataMember(EmitDefaultValue = false)]
+        public int? low_stock_amount { get; set; }
 
         /// <summary>
         /// Allow one item to be bought in a single order. Default is false.
