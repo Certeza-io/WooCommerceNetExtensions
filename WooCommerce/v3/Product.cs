@@ -886,6 +886,8 @@ namespace WooCommerceNET.WooCommerce.v3
     [DataContract]
     public class ComponentItemLine
     {
+        private object _thumbnail_id;
+
         /// <summary>
         /// Component ID.
         /// </summary>
@@ -932,7 +934,27 @@ namespace WooCommerceNET.WooCommerce.v3
         /// The attachment ID of the thumbnail associated with this Component.
         /// </summary>
         [DataMember(EmitDefaultValue = false)]
-        public string thumbnail_id { get; set; }
+        public object thumbnail_id { 
+
+            // This is a workaround to handle the fact that the API returns the thumbnail ID as a string, but accepts it as an int.
+            get { 
+                return _thumbnail_id; 
+            } 
+            set { 
+                if (value is int)
+                {
+                    _thumbnail_id = value;
+                }
+                else if (value is string stringValue && int.TryParse(stringValue, out int intValue))
+                {
+                    _thumbnail_id = intValue;
+                }
+                else
+                {
+                    _thumbnail_id = null;
+                }
+            } 
+        }
 
         /// <summary>
         /// URL of the thumbnail associated with this Component.
